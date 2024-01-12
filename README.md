@@ -4,10 +4,8 @@
 Welcome to our cutting-edge gym app that seamlessly integrates the needs of instructors, members, and administrators for a streamlined fitness experience. Whether you're a fitness enthusiast looking to book classes or an instructor aiming to manage your schedule, our app has you covered. Here's a breakdown of the key functionalities:
 
 
-![Logo](https://st2.depositphotos.com/35423868/44178/v/450/depositphotos_441782904-stock-illustration-white-location-gym-icon-isolated.jpg)
-
 <p align="center">
-  <img src="https://github.com/waldyr/Sublime-Installer/blob/master/sublime_text.png?raw=true" alt="Sublime's custom image"/>
+  <img src="[https://github.com/waldyr/Sublime-Installer/blob/master/sublime_text.png?raw=true](https://img.freepik.com/premium-vector/letter-g-logo-design-luxury-g-letter-logotype-sign-vector-template_754537-286.jpg)" alt="Sublime's custom image"/>
 </p>
 
 
