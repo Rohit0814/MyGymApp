@@ -5,7 +5,7 @@ Welcome to our cutting-edge gym app that seamlessly integrates the needs of inst
 
 
 <p align="center">
-  <img src="[https://img.freepik.com/premium-vector/letter-g-logo-design-luxury-g-letter-logotype-sign-vector-template_754537-286.jpg]" alt="Sublime's custom image"/>
+  <img src="https://img.freepik.com/premium-vector/letter-g-logo-design-luxury-g-letter-logotype-sign-vector-template_754537-286.jpg" alt="Sublime's custom image"/>
 </p>
 
 
