@@ -3,8 +3,9 @@
 
 Welcome to our cutting-edge gym app that seamlessly integrates the needs of instructors, members, and administrators for a streamlined fitness experience. Whether you're a fitness enthusiast looking to book classes or an instructor aiming to manage your schedule, our app has you covered. Here's a breakdown of the key functionalities:
 
-
+<p align="center">
 ![Logo](https://st2.depositphotos.com/35423868/44178/v/450/depositphotos_441782904-stock-illustration-white-location-gym-icon-isolated.jpg)
+</p>
 
 
 ## Tech Stack
