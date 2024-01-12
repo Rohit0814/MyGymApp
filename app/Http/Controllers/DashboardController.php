@@ -22,7 +22,7 @@ class DashboardController extends Controller
                 return redirect()->route('admin.dashboard');
                 break;
             default:
-            return redirect()->route('login');
+                return redirect()->route('login');
                 break;
         }
     }

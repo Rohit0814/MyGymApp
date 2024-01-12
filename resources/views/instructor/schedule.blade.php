@@ -8,8 +8,8 @@
     <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-            <div class="p-10 text-gray-900">
-                <form action="{{ route('schedule.store') }}" method="post" class="max-w-lg">
+            <div class="p-10 text-gray-900 max-w-full divide-y">
+                <form action="{{ route('schedule.store') }}" method="post" class="max-w-full">
                     @csrf
                     <div class=" space-y-6">
                         <div>
