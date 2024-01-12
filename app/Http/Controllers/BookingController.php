@@ -14,7 +14,7 @@ class BookingController extends Controller
         ->whereDoesntHave('members', function($query){
             $query->where('user_id' , auth()->user()->id);
         })
-        ->oldest()->get();
+        ->oldest('date_time')->get();
         return view('member.book')->with('scheduledClasses',$scheduledClass);
     }
 

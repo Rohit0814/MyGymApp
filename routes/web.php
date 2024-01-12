@@ -20,6 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Route::get('/dashboard', DashboardController::class)->middleware(['auth'])->name('dashboard');
 
 Route::get('/instructor/dashboard', function () {
