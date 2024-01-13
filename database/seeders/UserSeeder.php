@@ -13,31 +13,32 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory()->create([
-            'name' => 'rohit',
-            'email' => 'rohit@example.com',
-            'password' => '9234223298'
-        ]);
+        // User::factory()->create([
+        //     'name' => 'rohit',
+        //     'email' => 'rohit@example.com',
+        //     'password' => '9234223298'
+        // ]);
 
         
 
-        User::factory()->create([
-            'name' => 'John',
-            'email' => 'john@example.com',
-            'role' => 'instructor',
-            'password' => '9234223298',
-        ]);
+        // User::factory()->create([
+        //     'name' => 'John',
+        //     'email' => 'john@example.com',
+        //     'role' => 'instructor',
+        //     'password' => '9234223298',
+        // ]);
 
         User::factory()->create([
             'name' => 'Admin',
             'email' => 'admin@example.com',
-            'role' => 'admin'
+            'role' => 'admin',
+            'password' => '9234223298',
         ]);
 
-        User::factory()->count(10)->create();
+        // User::factory()->count(10)->create();
 
-        User::factory()->count(10)->create([
-            'role' => 'instructor'
-        ]);
+        // User::factory()->count(10)->create([
+        //     'role' => 'instructor'
+        // ]);
     }
 }

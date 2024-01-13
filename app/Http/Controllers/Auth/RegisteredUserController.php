@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 
+
 class RegisteredUserController extends Controller
 {
     /**
@@ -20,7 +21,7 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        return view('admin.create-user');
     }
 
     /**
@@ -40,12 +41,19 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role'=>$request->userType,
         ]);
 
-        event(new Registered($user));
+        // $user=new User;
+        // $user->name = $request['name'];
+        // $user->email = $request['email'];
+        // $user->password = Hash::make($request['password']);
+        // $user->role = $request['userType'];
+        // $user->save();
+        // event(new Registered($user));
 
-        Auth::login($user);
+        // Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect()->route('user.create');
     }
 }

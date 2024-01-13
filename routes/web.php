@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ScheduledClassController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,13 +25,16 @@ Route::get('/', function () {
 
 Route::get('/dashboard', DashboardController::class)->middleware(['auth'])->name('dashboard');
 
-Route::get('/instructor/dashboard', function () {
-    return view('instructor.dashboard');
-})->middleware(['auth','role:instructor'])->name('instructor.dashboard');
 
-Route::resource('/instructor/schedule', ScheduledClassController::class)
-->only('index','store','create','destroy')
-->middleware(['auth','role:instructor']);
+/* Instructor Routes */
+Route::middleware(['auth', 'role:instructor'])->group(function () {
+    Route::get('/instructor/dashboard', function () {
+        return view('instructor.dashboard');
+    })->name('instructor.dashboard');
+
+    Route::resource('/instructor/schedule', ScheduledClassController::class)
+    ->only('index','store','create','destroy');
+});
 
 
 /* Member routes */
@@ -44,9 +48,19 @@ Route::middleware(['auth','role:member'])->group(function(){
     Route::delete('/member/bookings/{id}',[BookingController::class, 'destroy'])->name('booking.destroy');
 });
 
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
-})->middleware(['auth','role:admin'])->name('admin.dashboard');
+
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/admin/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+    Route::get('/admin/createuser',[RegisteredUserController::class, 'create'])->name('user.create');
+    Route::post('/admin/created', [RegisteredUserController::class, 'store'])->name('user.store');
+});
+
+// Route::get('/admin/dashboard', function () {
+//     return view('admin.dashboard');
+// })->middleware(['auth','role:admin'])->name('admin.dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
